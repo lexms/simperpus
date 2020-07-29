@@ -61,7 +61,7 @@ include '../konfigurasi/function.php';
                 <input type="text" name="isbn" id="isbn" required="required">
             </div>
             <div>
-                <label for="judul">Judul:</label>
+                <label for="judul">Judul:</label> 
                 <input type="text" name="judul" id="judul" required="required" size ="30">
             </div>
             <div>
@@ -69,21 +69,21 @@ include '../konfigurasi/function.php';
                 <input type="file" name="gambar" id="gambar">
             </div>
             <div>
-                <label for="role">Pengarang:</label>
+                <label for="role">Pengarang:</label> 
                 <select name="idpengarang" id="idpengarang">
                     <?php
-                        $con = connect_db();
-                        $query = "SELECT * FROM pengarang";
-                        $result = execute_query($con, $query);
-                        while($pengarang = mysqli_fetch_array($result)){
-                            ?>
-                            <option value="<?$pengarang['id']?>"><?= $pengarang['nama']?></option>
-                            <?php
-                        }?>
+                    $con = connect_db();
+                    $query = "SELECT * FROM pengarang";
+                    $result = execute_query($con, $query);
+                    while($pengarang = mysqli_fetch_array($result)){
+                        ?>
+                        <option value="<?=$pengarang['id']?>"><?=$pengarang['nama']?></option>
+                        <?php
+                    }?>
                 </select>
             </div>
             <div>
-                <label for="stok">Stok:</label>
+                <label for="stok">Stok:</label> 
                 <input type="text" name="stok" id="stok" required="required" size="10">
             </div>
             <div>
