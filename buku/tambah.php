@@ -77,7 +77,7 @@ include '../konfigurasi/function.php';
                     $result = execute_query($con, $query);
                     while($pengarang = mysqli_fetch_array($result)){
                         ?>
-                        <option value="<?=$pengarang['id']?>"><?=$pengarang['nama']?></option>
+                        <option value="<?= $pengarang['id']?>"><?= $pengarang['nama']?></option>
                         <?php
                     }?>
                 </select>

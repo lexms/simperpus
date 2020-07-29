@@ -28,7 +28,7 @@ include '../konfigurasi/function.php';
                 <td><?= $data['judul'] ?></td>
                 <td><?= $data['nama'] ?></td>
                 <td><?= $data['stok'] ?></td>
-                <td><img src="../image<?$data['gambar']?>" width="100" height="100 "alt=""></td>
+                <td><img src='../image/<?= $data['gambar'] ?>' width="100" height="100"></td>
                 <td><a href="detail.php?id=<?= $data['id'] ?>">
                         Detail</a>
                     <a href="edit.php?id=<?= $data['id'] ?>">
